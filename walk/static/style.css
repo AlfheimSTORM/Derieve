@@ -1,8 +1,10 @@
 button{
     background-color: lightblue;
     cursor: pointer;
+    width: 100px;
+    height: 25px;
 }
 
-body{
+html,body{
     background-color: orange;
 }
