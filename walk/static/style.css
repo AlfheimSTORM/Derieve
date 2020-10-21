@@ -1,1 +1,8 @@
+button{
+    background-color: lightblue;
+    cursor: pointer;
+}
 
+body{
+    background-color: orange;
+}
