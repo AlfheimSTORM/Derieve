@@ -68,7 +68,7 @@ def UIC():
     number = 20
 
     # move through list
-    search = UIC
+    search = uic
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
