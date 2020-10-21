@@ -15,7 +15,7 @@ import re
 @app.route('/')
 
 def index():
-    return render_template("youtube.html", text = text)
+    return render_template("youtube.html")
 
 
 
