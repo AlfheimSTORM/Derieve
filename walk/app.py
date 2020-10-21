@@ -15,17 +15,17 @@ import re
 @app.route('/')
 
 def index():
-    return render_template("youtube.html")
+    return render_template("youtube.html", text = text)
 
 
 
 
-@app.route('/tiktok')
+@app.route('/pinterest')
 
 # define app function
-def tiktok():
+def pinterest():
     # set up list
-    tiktok = "TikTok"
+    pinterest = "Pinterest"
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
@@ -34,7 +34,7 @@ def tiktok():
     number = 20
 
     # move through list
-    search = tiktok
+    search = pinterest
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
@@ -49,7 +49,7 @@ def tiktok():
     soup = BeautifulSoup(page.text, 'html.parser')
     text = (soup.text)
 
-    return render_template("tiktok.html", text = text)
+    return render_template("pinterest.html", text = text)
 
 
 
@@ -59,7 +59,7 @@ def tiktok():
 # define app function
 def youtube():
     # set up list
-    instagram = "Instagram"
+    pinterest = "Pinterest"
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
@@ -92,7 +92,7 @@ def youtube():
 # define app function
 def facebook():
     # set up list
-    instagram = "Instagram"
+    pinterest = "Pinterest"
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
@@ -126,7 +126,7 @@ def facebook():
 # define app function
 def twitter():
     # set up list
-    instagram = "Instagram"
+    pinterest = "Pinterest"
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
