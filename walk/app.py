@@ -15,17 +15,17 @@ import re
 @app.route('/')
 
 def index():
-    return render_template("instagram.html")
+    return render_template("youtube.html")
 
 
 
 
-@app.route('/instagram')
+@app.route('/tiktok')
 
 # define app function
-def instagram():
+def tiktok():
     # set up list
-    instagram = "Instagram"
+    tiktok = "TikTok"
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
@@ -34,7 +34,7 @@ def instagram():
     number = 20
 
     # move through list
-    search = instagram
+    search = tiktok
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
@@ -49,7 +49,7 @@ def instagram():
     soup = BeautifulSoup(page.text, 'html.parser')
     text = (soup.text)
 
-    return render_template("instagram.html", text = text)
+    return render_template("tiktok.html", text = text)
 
 
 
