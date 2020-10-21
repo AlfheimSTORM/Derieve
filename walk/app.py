@@ -15,26 +15,26 @@ import re
 @app.route('/')
 
 def index():
-    return render_template("index.html")
+    return render_template("instagram.html")
 
 
 
 
-@app.route('/gallery')
+@app.route('/instagram')
 
 # define app function
-def gallery():
+def instagram():
     # set up list
-    gallery = "gallery&400"
-    UIC = 'UIC'
-    chicago = 'chicago'
-    usa = 'usa'
+    instagram = "Instagram"
+    youtube = 'Youtube'
+    facebook = 'Facebook'
+    twitter = 'Twitter'
 
     # get number
     number = 20
 
     # move through list
-    search = gallery
+    search = instagram
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
@@ -49,26 +49,26 @@ def gallery():
     soup = BeautifulSoup(page.text, 'html.parser')
     text = (soup.text)
 
-    return render_template("index.html", text = text)
+    return render_template("instagram.html", text = text)
 
 
 
 
-@app.route('/uic')
+@app.route('/youtube')
 
 # define app function
-def UIC():
+def youtube():
     # set up list
-    gallery = "gallery&400"
-    UIC = 'UIC'
-    chicago = 'chicago'
-    usa = 'usa'
+    instagram = "Instagram"
+    youtube = 'Youtube'
+    facebook = 'Facebook'
+    twitter = 'Twitter'
 
     # get number
     number = 20
 
     # move through list
-    search = UIC
+    search = youtube
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
@@ -83,25 +83,25 @@ def UIC():
     soup = BeautifulSoup(page.text, 'html.parser')
     text = (soup.text)
 
-    return render_template("uic.html", text = text)
+    return render_template("youtube.html", text = text)
 
 
 
-@app.route('/usa')
+@app.route('/facebook')
 
 # define app function
-def usa():
+def facebook():
     # set up list
-    gallery = "gallery&400"
-    UIC = 'UIC'
-    chicago = 'chicago'
-    usa = 'usa'
+    instagram = "Instagram"
+    youtube = 'Youtube'
+    facebook = 'Facebook'
+    twitter = 'Twitter'
 
     # get number
     number = 20
 
     # move through list
-    search = usa
+    search = facebook
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
@@ -116,26 +116,26 @@ def usa():
     soup = BeautifulSoup(page.text, 'html.parser')
     text = (soup.text)
 
-    return render_template("usa.html", text = text)
+    return render_template("facebook.html", text = text)
 
 
 
 
-@app.route('/chicago')
+@app.route('/twitter')
 
 # define app function
-def chicago():
+def twitter():
     # set up list
-    gallery = "gallery&400"
-    UIC = 'UIC'
-    chicago = 'chicago'
-    usa = 'usa'
+    instagram = "Instagram"
+    youtube = 'Youtube'
+    facebook = 'Facebook'
+    twitter = 'Twitter'
 
     # get number
     number = 20
 
     # move through list
-    search = chicago
+    search = twitter
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
@@ -150,4 +150,4 @@ def chicago():
     soup = BeautifulSoup(page.text, 'html.parser')
     text = (soup.text)
 
-    return render_template("chicago.html", text = text)
+    return render_template("twitter.html", text = text)
