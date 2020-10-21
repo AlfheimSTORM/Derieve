@@ -14,8 +14,16 @@ import re
 # set route for user navigation
 @app.route('/')
 
-# define app function
 def index():
+    return render_template("index.html")
+
+
+
+
+@app.route('/gallery')
+
+# define app function
+def gallery():
     # set up list
     gallery = "gallery&400"
     UIC = 'UIC'
