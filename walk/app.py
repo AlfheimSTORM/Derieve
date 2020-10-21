@@ -10,6 +10,7 @@ import re
 
 
 
+
 # set route for user navigation
 @app.route('/')
 
@@ -25,7 +26,7 @@ def index():
     number = 20
 
     # move through list
-    search = index
+    search = UIC
     article = []
     results = 100 # valid options 10, 20, 30, 40, 50, and 100
     page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
