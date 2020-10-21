@@ -12,7 +12,7 @@ import re
 
 
 # set route for user navigation
-@app.route('/')
+@app.route('/index')
 
 # define app function
 def index():
