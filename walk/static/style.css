@@ -1,8 +1,9 @@
 button{
     background-color: lightblue;
     cursor: pointer;
-    width: 500px;
-    height: 125px;
+    width: 375px;
+    height: 94px;
+    left: 50%
 }
 
 html,body{
