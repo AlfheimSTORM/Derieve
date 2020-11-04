@@ -158,7 +158,7 @@ def twitter():
 
 
 
-    @app.route('/snapchat')
+@app.route('/snapchat')
 
 # define app function
 def snapchat():
