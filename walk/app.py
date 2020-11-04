@@ -29,6 +29,7 @@ def pinterest():
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
+    snapchat = 'Snapchat'
 
     # get number
     number = 20
@@ -63,6 +64,7 @@ def youtube():
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
+    snapchat = 'Snapchat'
 
     # get number
     number = 20
@@ -96,6 +98,7 @@ def facebook():
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
+    snapchat = 'Snapchat'
 
     # get number
     number = 20
@@ -130,6 +133,7 @@ def twitter():
     youtube = 'Youtube'
     facebook = 'Facebook'
     twitter = 'Twitter'
+    snapchat = 'Snapchat'
 
     # get number
     number = 20
@@ -151,3 +155,37 @@ def twitter():
     text = (soup.text)
 
     return render_template("twitter.html", text = text)
+
+
+
+    @app.route('/snapchat')
+
+# define app function
+def twitter():
+    # set up list
+    pinterest = "Pinterest"
+    youtube = 'Youtube'
+    facebook = 'Facebook'
+    twitter = 'Twitter'
+    snapchat = 'Snapchat'
+
+    # get number
+    number = 20
+
+    # move through list
+    search = snapchat
+    article = []
+    results = 100 # valid options 10, 20, 30, 40, 50, and 100
+    page = requests.get(f"https://www.google.com/search?q={search}&num={results}")
+    soup = BeautifulSoup(page.content, "html.parser")
+    links = soup.findAll("a")
+    for link in links :
+        link_href = link.get('href')
+        if "url?q=" in link_href and not "webcache" in link_href:
+            article.append((link.get('href').split("?q=")[1].split("&sa=U")[0]))
+
+    page = requests.get(f'{article[number]}')
+    soup = BeautifulSoup(page.text, 'html.parser')
+    text = (soup.text)
+
+    return render_template("snapchat.html", text = text)
