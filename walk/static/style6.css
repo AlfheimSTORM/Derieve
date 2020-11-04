@@ -1,0 +1,11 @@
+button{
+    background-color: rgb(59, 78, 250);
+    cursor: pointer;
+    width: 500px;
+    height: 125px;
+}
+
+html,body{
+    background-color: rgb(241, 70, 58);
+    color: rgb(0, 0, 0);
+}
