@@ -161,7 +161,7 @@ def twitter():
     @app.route('/snapchat')
 
 # define app function
-def twitter():
+def snapchat():
     # set up list
     pinterest = "Pinterest"
     youtube = 'Youtube'
